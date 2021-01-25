@@ -38,8 +38,7 @@ export default {
           texto: 'Aprender Angular 2',
           terminada: false
         }
-      ],
-      numTask: 3
+      ]
     }    
   },
   methods: {
