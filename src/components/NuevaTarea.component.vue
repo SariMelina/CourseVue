@@ -31,7 +31,7 @@ export default {
                   terminada: false
               })
              /*  this.$emit('incrementarContador', 1)  *//*  1ra forma de comunicación con el padre */
-             this.updateCounter()   /*  1ra forma de comunicación con el padre  */
+             this.updateCounter()   /*  2ra forma de comunicación con el padre  */
           }
           this.nuevaTarea = ''
       }
