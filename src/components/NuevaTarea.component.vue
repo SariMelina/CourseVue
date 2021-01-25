@@ -15,6 +15,8 @@
 
 <script>
 
+import { bus } from '../main.js'
+
 export default {
   data () {
       return {
@@ -31,10 +33,14 @@ export default {
                   terminada: false
               })
              /*  this.$emit('incrementarContador', 1)  *//*  1ra forma de comunicación con el padre */
-             this.updateCounter()   /*  2ra forma de comunicación con el padre  */
+            /*  this.updateCounter() */   /*  2ra forma de comunicación con el padre  */
+            bus.$emit('updateCounter', this.tareas.length)
           }
           this.nuevaTarea = ''
       }
+  },
+  created () {
+      bus.$emit('updateCounter', this.tareas.length)
   }
 };
 </script>
