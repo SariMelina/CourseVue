@@ -1,0 +1,38 @@
+<template>
+    <div class="input-group">
+        <input type="text"
+        placeholder="Escribe una nueva tarea"
+        v-model="nuevaTarea"
+        class="form-control"
+        @keyup.enter="agregarTarea">
+        <span class="input-group-btn">
+            <button type="button"
+            @click="agregarTarea"
+            class="btn btn-dark">Agregar</button>
+        </span>
+    </div>
+</template>
+
+<script>
+
+export default {
+  data () {
+      return {
+          nuevaTarea: ''
+      }
+  }, 
+  props: ['tareas'],
+  methods: {
+      agregarTarea () {
+          const tarea = this.nuevaTarea.trim()
+          if(tarea){
+              this.tareas.push({
+                  texto: tarea,
+                  terminada: false
+              })
+          }
+          this.nuevaTarea = ''
+      }
+  }
+};
+</script>
