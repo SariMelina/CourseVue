@@ -1,7 +1,8 @@
 <template>
   <div class="container bg-light">
-    <Lista titulo="Lista de Tareas"/>
-    <h3 class="pull-left">Tareas por hacer: {{ numTask }}</h3>
+    <Lista titulo="Lista de Tareas"
+    :numTask = "numTask"/>
+    <h3 class="pull-left">Tareas por hacer: {{ numTask }}</h3> <!-- Primera forma de comunicación de componente hijo-hijo -->
     <!-- <Nueva-Tarea :tareas="tareas" v-on:incrementarContador="numTask += $event"/>  --><!-- 1ra forma de comunicación con el padre -->
     <Nueva-Tarea :tareas="tareas" :updateCounter="updateCounter"/>   <!-- 2ra forma de comunicación con el padre -->
     <Crear-Lista :tareas="tareas"/>
