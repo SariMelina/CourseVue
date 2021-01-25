@@ -34,7 +34,8 @@ export default {
               })
              /*  this.$emit('incrementarContador', 1)  *//*  1ra forma de comunicación con el padre */
             /*  this.updateCounter() */   /*  2ra forma de comunicación con el padre  */
-            bus.$emit('updateCounter', this.tareas.length)
+            /* bus.$emit('updateCounter', this.tareas.length) */
+            bus.updateCounter(this.tareas.length)
           }
           this.nuevaTarea = ''
       }

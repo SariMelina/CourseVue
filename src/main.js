@@ -5,7 +5,13 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
-export const bus = new Vue(); //servicio
+export const bus = new Vue({
+  methods:{
+    updateCounter(numTask){
+      this.$emit('updateCounter', numTask)
+    }
+  }
+}); //servicio
 
 new Vue({
   router,
