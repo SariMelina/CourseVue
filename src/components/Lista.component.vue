@@ -1,10 +1,6 @@
 <template>
-    <div>
-        <div class="bg-light">          
-            <div>
-                <h2>{{ titulo }}</h2>
-            </div>
-        </div>
+    <div class="bg-light">
+        <h2>{{ titulo }}</h2>        
     </div>
 </template>
 
