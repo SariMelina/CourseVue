@@ -1,7 +1,6 @@
 <template>
     <div class="bg-light">
-        <h2>{{ toUppercase() }}</h2> 
-        <h3 class="pull-left">Tareas por hacer:</h3>    
+        <h2>{{ toUppercase() }}</h2>   
     </div>
 </template>
 

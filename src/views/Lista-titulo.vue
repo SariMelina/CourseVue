@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <div class="bg-light">
-      <Lista titulo="Lista de Tareas"/>
-      <Nueva-Tarea :tareas="tareas"/>
-      <Crear-Lista :tareas="tareas"/>
-    </div>
+  <div class="container bg-light">
+    <Lista titulo="Lista de Tareas"/>
+    <h3 class="pull-left">Tareas por hacer: {{ numTask }}</h3>
+    <!-- <Nueva-Tarea :tareas="tareas" v-on:incrementarContador="numTask += $event"/>  --><!-- 1ra forma de comunicación con el padre -->
+    <Nueva-Tarea :tareas="tareas" :updateCounter="updateCounter"/>   <!-- 2ra forma de comunicación con el padre -->
+    <Crear-Lista :tareas="tareas"/>
   </div>  
 </template>
 
@@ -37,8 +37,14 @@ export default {
           texto: 'Aprender Angular 2',
           terminada: false
         }
-      ]
+      ],
+      numTask: 3
     }    
+  },
+  methods: {
+    updateCounter () {
+      this.numTask++
+    }
   }
 };
 </script>
