@@ -24,3 +24,5 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## [SECTION 7 - SLOTS](https://github.com/SariMelina/SLOTS)
+
+## [SECTION 8 - PERSONALIZED DIRECTIVES](https://github.com/SariMelina/Personalized-Directives)
