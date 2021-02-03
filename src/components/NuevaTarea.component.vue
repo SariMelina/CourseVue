@@ -38,7 +38,7 @@ export default {
             bus.updateCounter(this.tareas.length)
           }
           this.nuevaTarea = ''
-          this.$http.post('', {
+          this.$http.post('tareas.json', {
               texto:tarea,
               terminada:false
           }).then(resp => console.log(resp))

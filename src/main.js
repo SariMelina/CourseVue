@@ -8,7 +8,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueResource)
 
-Vue.http.options.root = 'https://tareas-a9062-default-rtdb.firebaseio.com/tareas.json'
+Vue.http.options.root = 'https://tareas-a9062-default-rtdb.firebaseio.com'
 
 export const bus = new Vue({
   methods:{

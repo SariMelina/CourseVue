@@ -47,7 +47,7 @@ export default {
     }
   },
   created () {
-    this.$http.get('').then(resp => {
+    this.$http.get('tareas.json').then(resp => {
       return resp.json()
     }).then(respJson => {
       for(let id in respJson){
