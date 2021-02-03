@@ -45,6 +45,10 @@ export default {
     updateCounter () {
       this.numTask++
     }
+  },
+  created () {
+    this.$http.get('https://tareas-a9062-default-rtdb.firebaseio.com/tareas.json')
+    .then(resp => console.log(resp.json))
   }
 };
 </script>
