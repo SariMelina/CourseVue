@@ -38,7 +38,7 @@ export default {
             bus.updateCounter(this.tareas.length)
           }
           this.nuevaTarea = ''
-          this.$http.post('https://tareas-a9062-default-rtdb.firebaseio.com/tareas.json', {
+          this.$http.post('', {
               texto:tarea,
               terminada:false
           }).then(resp => console.log(resp))

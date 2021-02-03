@@ -47,12 +47,16 @@ export default {
     }
   },
   created () {
-    this.$http.get('https://tareas-a9062-default-rtdb.firebaseio.com/tareas.json')
-    .then(resp => {
+    this.$http.get('').then(resp => {
       return resp.json()
     }).then(respJson => {
       for(let id in respJson){
-        this.tareas.push(respJson[id])
+        let tarea = {
+          id: id,
+          texto: respJson[id].texto,
+          terminada:respJson[id].terminada
+        }
+        this.tareas.push(tarea)
       }
     })
   }
