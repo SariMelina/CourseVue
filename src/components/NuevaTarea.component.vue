@@ -39,7 +39,7 @@ export default {
           }
           this.nuevaTarea = ''
           this.$http.post('https://tareas-a9062-default-rtdb.firebaseio.com/tareas.json', {
-              texto:texto,
+              texto:tarea,
               terminada:false
           }).then(resp => console.log(resp))
       }
