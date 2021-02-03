@@ -48,7 +48,13 @@ export default {
   },
   created () {
     this.$http.get('https://tareas-a9062-default-rtdb.firebaseio.com/tareas.json')
-    .then(resp => console.log(resp.json))
+    .then(resp => {
+      return resp.json()
+    }).then(respJson => {
+      for(let id in respJson){
+        this.tareas.push(respJson[id])
+      }
+    })
   }
 };
 </script>
