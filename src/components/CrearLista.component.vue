@@ -25,7 +25,7 @@ export default {
   props: ['tareas'],
   methods: {
       estado(indice){
-          let terminada = this.tareas[indice].terminada =  !this.tareas[indice].terminada
+          let terminada = this.tareas[indice].terminada = !this.tareas[indice].terminada
           let id = this.tareas[indice].id;
 
           this.$http.patch('tareas/' + id + '.json' ,{
