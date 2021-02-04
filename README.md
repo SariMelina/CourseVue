@@ -28,3 +28,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### [SECTION 8 - PERSONALIZED DIRECTIVES](https://github.com/SariMelina/Personalized-Directives)
 
 ### [SECTION 10 - FILTERS](https://github.com/SariMelina/Filters)
+
+### [SECTION 12 - ROUTING](https://github.com/SariMelina/routing)
